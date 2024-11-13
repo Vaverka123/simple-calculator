@@ -13,6 +13,8 @@ function handleButtonClick(event) {
 
   if (type === "number") {
     appendNumber(value);
+  } else if (type === "sign") {
+    toggleSign();
   } else if (type === "percent") {
     caculatePercent();
   } else if (type === "operator") {
@@ -25,8 +27,15 @@ function handleButtonClick(event) {
 }
 
 function appendNumber(number) {
+  if (currentOperand === "" && number === "0") return;
   if (number === "." && currentOperand.includes(".")) return;
   currentOperand = currentOperand.toString() + number.toString();
+  updateInput();
+}
+
+function toggleSign() {
+  if (currentOperand === "") return;
+  currentOperand = (parseFloat(currentOperand) * -1).toString();
   updateInput();
 }
 
@@ -61,8 +70,8 @@ function calculateResult() {
       break;
     case "/":
       if (curr === 0) {
-        alert("Error: Division by zero!");
-        clearScreen();
+        currentOperand = "undefined";
+        updateInput();
         return;
       }
       result = prev / curr;
@@ -82,6 +91,12 @@ function clearScreen() {
   operation = undefined;
   updateInput();
 }
+
+document
+  .getElementById("main-input")
+  .addEventListener("paste", function (event) {
+    event.preventDefault();
+  });
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {

@@ -25,6 +25,18 @@ div {
   background-color: var(--input-bgc);
 }
 
+@media screen and (max-width: 375px) {
+  div {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  div {
+    display: none;
+  }
+}
+
 input {
   margin-top: 35px;
   padding: 0 10px;
