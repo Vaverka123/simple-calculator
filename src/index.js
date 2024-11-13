@@ -47,6 +47,7 @@ function caculatePercent() {
   if (currentOperand === "") return;
   currentOperand = (parseFloat(currentOperand) * 0.01).toString();
   updateInput();
+  resultLocked = true;
 }
 
 function chooseOperation(op) {
