@@ -1,6 +1,7 @@
 let currentOperand = "";
 let previousOperand = "";
 let operation = undefined;
+let resultLocked = false;
 
 function updateInput() {
   const input = document.getElementById("main-input");
@@ -20,13 +21,16 @@ function handleButtonClick(event) {
   } else if (type === "operator") {
     chooseOperation(value);
   } else if (type === "clear") {
-    clearScreen();
+    clearInput();
   } else if (type === "equal") {
     calculateResult();
   }
 }
 
 function appendNumber(number) {
+  if (resultLocked) {
+    clearInput();
+  }
   if (currentOperand === "" && number === "0") return;
   if (number === "." && currentOperand.includes(".")) return;
   currentOperand = currentOperand.toString() + number.toString();
@@ -51,6 +55,7 @@ function chooseOperation(op) {
   operation = op;
   previousOperand = currentOperand;
   currentOperand = "";
+  resultLocked = false;
 }
 
 function calculateResult() {
@@ -74,6 +79,7 @@ function calculateResult() {
       if (curr === 0) {
         currentOperand = "undefined";
         updateInput();
+        resultLocked = true;
         return;
       }
       result = prev / curr;
@@ -85,9 +91,10 @@ function calculateResult() {
   operation = undefined;
   previousOperand = "";
   updateInput();
+  resultLocked = true;
 }
 
-function clearScreen() {
+function clearInput() {
   currentOperand = "";
   previousOperand = "";
   operation = undefined;
