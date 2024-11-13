@@ -3,7 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <input
+        type="text"
+        placeholder="0"
+        onkeypress="return /[0-9,]/.test(event.key)"
+      />
+      <button class="middle-buttons">AC</button>
+      <button class="middle-buttons">+/-</button>
+      <button class="middle-buttons">%</button>
+      <button class="operator">/</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">*</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">-</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operator">+</button>
+      <button class="zero">0</button>
+      <button>,</button>
+      <button class="operator">=</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>

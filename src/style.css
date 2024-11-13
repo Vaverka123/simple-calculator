@@ -1,0 +1,61 @@
+:root {
+  --general-bgc: #b7d1da;
+  --input-bgc: #2e282a;
+  --input-color: #e2e8dd;
+  --middle-buttons-bgc: #424242;
+  --numbers-bgc: #95a3a4;
+  --operators-bgc: #d16014;
+  --all-buttons-color: #efe6dd;
+}
+
+body {
+  background-color: var(--general-bgc);
+}
+
+div {
+  margin: 0 auto;
+  padding: 7px;
+  width: 350px;
+  border-radius: 20px;
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 7px;
+  background-color: var(--input-bgc);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+input {
+  margin-top: 35px;
+  padding: 0 10px;
+  grid-column: 1/-1;
+  background-color: var(--input-bgc);
+  border: none;
+  color: var(--input-color);
+  text-align: end;
+  font-size: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+button {
+  color: var(--input-color);
+  background-color: var(--numbers-bgc);
+  border-radius: 5px;
+  font-size: 35px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+
+.middle-buttons {
+  background-color: var(--middle-buttons-bgc);
+}
+
+.operator {
+  background-color: var(--operators-bgc);
+}
+
+.zero {
+  grid-column: span 2;
+}
