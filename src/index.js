@@ -54,6 +54,8 @@ function chooseOperation(op) {
 }
 
 function calculateResult() {
+  if (!operation) return;
+
   let result;
   const prev = parseFloat(previousOperand);
   const curr = parseFloat(currentOperand);
@@ -101,4 +103,35 @@ document
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", handleButtonClick);
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    calculateResult();
+  }
+});
+
+const setTheme = (theme) => {
+  document.documentElement.className = theme;
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeButtons = document.querySelectorAll(
+    'button[data-type="color-theme"]'
+  );
+
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.querySelector("img").alt.includes("bright")) {
+        setTheme("bright");
+        button.style.display = "none";
+        button.nextElementSibling.style.display = "block";
+      } else if (button.querySelector("img").alt.includes("dark")) {
+        setTheme("dark");
+        button.style.display = "none";
+        button.previousElementSibling.style.display = "block";
+      }
+    });
+  });
 });
