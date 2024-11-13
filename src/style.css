@@ -23,7 +23,6 @@ div {
   grid-template-rows: repeat(6, 1fr);
   gap: 7px;
   background-color: var(--input-bgc);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 input {
@@ -34,18 +33,18 @@ input {
   border: none;
   color: var(--input-color);
   text-align: end;
-  font-size: 40px;
+  font-size: 45px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 button {
   color: var(--input-color);
   background-color: var(--numbers-bgc);
-  border-radius: 5px;
   font-size: 35px;
   border-radius: 20px;
   outline: none;
   border: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .middle-buttons {
