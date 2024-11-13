@@ -113,13 +113,6 @@ buttons.forEach((button) => {
   button.addEventListener("click", handleButtonClick);
 });
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    calculateResult();
-  }
-});
-
 const setTheme = (theme) => {
   document.documentElement.className = theme;
 };
@@ -142,4 +135,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
+
+document.addEventListener("keydown", function (event) {
+  const key = event.key;
+
+  if (key >= "0" && key <= "9") {
+    appendNumber(key);
+  } else if (key === ".") {
+    appendNumber(".");
+  } else if (key === "+" || key === "-" || key === "*" || key === "/") {
+    chooseOperation(key);
+  } else if (key === "%") {
+    caculatePercent();
+  } else if (key === "Enter" || key === "=") {
+    event.preventDefault();
+    calculateResult();
+  } else if (key === "Delete" || key === "Escape" || key === "Backspace") {
+    clearInput();
+  }
 });
