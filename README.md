@@ -18,7 +18,7 @@ It allows users to perform common arithmetic calculations.
 1. Task: https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit?tab=t.0#heading=h.rtfo3o71ktll
 
 2. How to run the app:
-   Please follow the link https://vaverka123.github.io/simple-calculator/dist/index.html .
+   Please follow the link https://vaverka123.github.io/simple-calculator/dist/
 
 3. Code structure:
    - Folder dist was created after running webpack and has 2 files: bundle.js contains the Javascript for functionality, index.html contains HTML for the main structure and CSS for styling the app.
