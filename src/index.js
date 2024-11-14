@@ -118,22 +118,16 @@ const setTheme = (theme) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const themeButtons = document.querySelectorAll(
-    'button[data-type="color-theme"]'
-  );
+  const themeButton = document.querySelector('button[data-type="color-theme"]');
 
-  themeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      if (button.querySelector("img").alt.includes("bright")) {
-        setTheme("bright");
-        button.style.display = "none";
-        button.nextElementSibling.style.display = "block";
-      } else if (button.querySelector("img").alt.includes("dark")) {
-        setTheme("dark");
-        button.style.display = "none";
-        button.previousElementSibling.style.display = "block";
-      }
-    });
+  themeButton.addEventListener("click", () => {
+    if (themeButton.innerHTML === "☀️") {
+      themeButton.innerHTML = "🌙";
+      setTheme("bright");
+    } else {
+      themeButton.innerHTML = "☀️";
+      setTheme("dark");
+    }
   });
 });
 

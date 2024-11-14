@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
-  </head>
-  <body>
-    <style>
-      :root,
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simple Calculator</title><script defer="defer" src="bundle.js"></script></head><body><style>:root,
       :root.dark {
         --general-bgc: #b7d1da;
         --input-bgc: #2e282a;
@@ -91,35 +82,4 @@
 
       .zero {
         grid-column: span 2;
-      }
-    </style>
-    <div>
-      <input
-        id="main-input"
-        type="text"
-        placeholder="0"
-        onkeypress="return /[0-9.]/.test(event.key)"
-      />
-      <button class="middle-buttons" data-type="clear">AC</button>
-      <button class="middle-buttons" data-type="sign">+/-</button>
-      <button class="middle-buttons" data-type="percent">%</button>
-      <button class="operator" data-type="operator" data-value="/">/</button>
-      <button data-type="number" data-value="7">7</button>
-      <button data-type="number" data-value="8">8</button>
-      <button data-type="number" data-value="9">9</button>
-      <button class="operator" data-type="operator" data-value="*">*</button>
-      <button data-type="number" data-value="4">4</button>
-      <button data-type="number" data-value="5">5</button>
-      <button data-type="number" data-value="6">6</button>
-      <button class="operator" data-type="operator" data-value="-">-</button>
-      <button data-type="number" data-value="1">1</button>
-      <button data-type="number" data-value="2">2</button>
-      <button data-type="number" data-value="3">3</button>
-      <button class="operator" data-type="operator" data-value="+">+</button>
-      <button class="theme" data-type="color-theme">☀️</button>
-      <button data-type="number" data-value="0">0</button>
-      <button data-type="number" data-value=".">.</button>
-      <button class="operator" data-type="equal">=</button>
-    </div>
-  </body>
-</html>
+      }</style><div><input id="main-input" type="text" placeholder="0" onkeypress="return /[0-9.]/.test(event.key)"> <button class="middle-buttons" data-type="clear">AC</button> <button class="middle-buttons" data-type="sign">+/-</button> <button class="middle-buttons" data-type="percent">%</button> <button class="operator" data-type="operator" data-value="/">/</button> <button data-type="number" data-value="7">7</button> <button data-type="number" data-value="8">8</button> <button data-type="number" data-value="9">9</button> <button class="operator" data-type="operator" data-value="*">*</button> <button data-type="number" data-value="4">4</button> <button data-type="number" data-value="5">5</button> <button data-type="number" data-value="6">6</button> <button class="operator" data-type="operator" data-value="-">-</button> <button data-type="number" data-value="1">1</button> <button data-type="number" data-value="2">2</button> <button data-type="number" data-value="3">3</button> <button class="operator" data-type="operator" data-value="+">+</button> <button class="theme" data-type="color-theme">☀️</button> <button data-type="number" data-value="0">0</button> <button data-type="number" data-value=".">.</button> <button class="operator" data-type="equal">=</button></div></body></html>
