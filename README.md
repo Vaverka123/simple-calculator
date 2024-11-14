@@ -4,8 +4,8 @@ This project is a basic calculator built using HTML, CSS, and JavaScript.
 It allows users to perform common arithmetic calculations.
 
    Screenshots:
-   [DARK mode](https://github.com/user-attachments/assets/d122c987-e66d-4c72-b849-1d06b4192933)
-   [BRIGHT mode](https://github.com/user-attachments/assets/7f89db00-f654-477e-9aa6-9010ad18df0e)
+   ![DARK mode](https://github.com/user-attachments/assets/d122c987-e66d-4c72-b849-1d06b4192933)
+   ![BRIGHT mode](https://github.com/user-attachments/assets/7f89db00-f654-477e-9aa6-9010ad18df0e)
 
 ## Features
 
