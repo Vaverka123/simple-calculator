@@ -34,18 +34,6 @@
         background-color: var(--input-bgc);
       }
 
-      @media screen and (max-width: 375px) {
-        div {
-          width: auto;
-        }
-      }
-
-      @media screen and (max-width: 230px) {
-        div {
-          display: none;
-        }
-      }
-
       input {
         margin-top: 35px;
         padding: 0 10px;
@@ -70,6 +58,21 @@
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
         cursor: pointer;
+      }
+
+      @media screen and (max-width: 375px) {
+        div {
+          width: 90vw;
+        }
+
+        input {
+          font-size: 8vw;
+        }
+
+        button {
+          font-size: 6vw;
+          padding: 10px;
+        }
       }
 
       .middle-buttons {
